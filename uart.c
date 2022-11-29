@@ -65,7 +65,7 @@ int stdout_putchar( int ch )
 int puts( const char *str )
 {
 	int index;
-	int 
+	int count=0;
 	
 	for ( index=0; ; index++ )
 	{
@@ -75,5 +75,7 @@ int puts( const char *str )
 			break;
 		}
 		stdout_putchar( str[index] );
+		count++;
 	}
+	return count;
 }
